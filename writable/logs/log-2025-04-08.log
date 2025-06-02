@@ -1,0 +1,50 @@
+ERROR - 2025-04-08 08:07:36 --> mysqli_sql_exception: Unknown column 'status' in 'field list' in C:\wamp64\www\oilid-temp\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\wamp64\www\oilid-temp\system\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `in...', 0)
+#1 C:\wamp64\www\oilid-temp\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `in...')
+#2 C:\wamp64\www\oilid-temp\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `in...')
+#3 C:\wamp64\www\oilid-temp\system\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `in...', Array, false)
+#4 C:\wamp64\www\oilid-temp\app\Controllers\Read.php(195): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\wamp64\www\oilid-temp\system\CodeIgniter.php(933): App\Controllers\Read->save_inspection()
+#6 C:\wamp64\www\oilid-temp\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Read))
+#7 C:\wamp64\www\oilid-temp\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\oilid-temp\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#9 C:\wamp64\www\oilid-temp\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\wamp64\www\oilid-temp\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+CRITICAL - 2025-04-08 08:07:36 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'status' in 'field list'
+[Method: POST, Route: read/save_inspection]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `inspection_data` (`item_uid`, `status`, `notes`, `inspection_date`) VALUES (:item_uid:, :status:, :notes:, :inspection_date:)', [...], false)
+ 2 APPPATH\Controllers\Read.php(195): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Read->save_inspection()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Read))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-04-08 08:07:36 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'status' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `inspection_data` (`item_uid`, `status`, `notes`, `inspection_date`) VALUES (\'undefined\', \'Accept\', \'The LNG Pipe is good now\', \'2025-04-08 08:07:36\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `inspection_data` (`item_uid`, `status`, `notes`, `inspection_date`) VALUES (\'undefined\', \'Accept\', \'The LNG Pipe is good now\', \'2025-04-08 08:07:36\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `inspection_data` (`item_uid`, `status`, `notes`, `inspection_date`) VALUES (:item_uid:, :status:, :notes:, :inspection_date:)', [...], false)
+ 4 APPPATH\Controllers\Read.php(195): CodeIgniter\Database\BaseBuilder->insert([...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Read->save_inspection()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Read))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-04-08 08:07:36 --> [Caused by] mysqli_sql_exception: Unknown column 'status' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `inspection_data` (`item_uid`, `status`, `notes`, `inspection_date`) VALUES (\'undefined\', \'Accept\', \'The LNG Pipe is good now\', \'2025-04-08 08:07:36\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `inspection_data` (`item_uid`, `status`, `notes`, `inspection_date`) VALUES (\'undefined\', \'Accept\', \'The LNG Pipe is good now\', \'2025-04-08 08:07:36\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `inspection_data` (`item_uid`, `status`, `notes`, `inspection_date`) VALUES (\'undefined\', \'Accept\', \'The LNG Pipe is good now\', \'2025-04-08 08:07:36\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `inspection_data` (`item_uid`, `status`, `notes`, `inspection_date`) VALUES (:item_uid:, :status:, :notes:, :inspection_date:)', [...], false)
+ 5 APPPATH\Controllers\Read.php(195): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Read->save_inspection()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Read))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

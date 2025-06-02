@@ -1,0 +1,102 @@
+ERROR - 2025-04-07 14:12:01 --> mysqli_sql_exception: Unknown column 'inspector_id' in 'field list' in C:\wamp64\www\oilid-temp\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\wamp64\www\oilid-temp\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT inspecto...', 0)
+#1 C:\wamp64\www\oilid-temp\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT inspecto...')
+#2 C:\wamp64\www\oilid-temp\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT inspecto...')
+#3 C:\wamp64\www\oilid-temp\app\Controllers\Users.php(25): CodeIgniter\Database\BaseConnection->query('SELECT inspecto...', Array)
+#4 C:\wamp64\www\oilid-temp\system\CodeIgniter.php(933): App\Controllers\Users->inspector_login()
+#5 C:\wamp64\www\oilid-temp\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#6 C:\wamp64\www\oilid-temp\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\wamp64\www\oilid-temp\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#8 C:\wamp64\www\oilid-temp\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#9 C:\wamp64\www\oilid-temp\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#10 {main}
+CRITICAL - 2025-04-07 14:12:01 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'inspector_id' in 'field list'
+[Method: POST, Route: users/inspector_login]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 APPPATH\Controllers\Users.php(25): CodeIgniter\Database\BaseConnection->query('SELECT inspector_id, inspector_name, inspector_rfid FROM inspector_users WHERE inspector_rfid = ?', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Users->inspector_login()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-04-07 14:12:01 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'inspector_id' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT inspector_id, inspector_name, inspector_rfid FROM inspector_users WHERE inspector_rfid = \'d3:ff:a8:19\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT inspector_id, inspector_name, inspector_rfid FROM inspector_users WHERE inspector_rfid = \'d3:ff:a8:19\'')
+ 3 APPPATH\Controllers\Users.php(25): CodeIgniter\Database\BaseConnection->query('SELECT inspector_id, inspector_name, inspector_rfid FROM inspector_users WHERE inspector_rfid = ?', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Users->inspector_login()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-04-07 14:12:01 --> [Caused by] mysqli_sql_exception: Unknown column 'inspector_id' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT inspector_id, inspector_name, inspector_rfid FROM inspector_users WHERE inspector_rfid = \'d3:ff:a8:19\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT inspector_id, inspector_name, inspector_rfid FROM inspector_users WHERE inspector_rfid = \'d3:ff:a8:19\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT inspector_id, inspector_name, inspector_rfid FROM inspector_users WHERE inspector_rfid = \'d3:ff:a8:19\'')
+ 4 APPPATH\Controllers\Users.php(25): CodeIgniter\Database\BaseConnection->query('SELECT inspector_id, inspector_name, inspector_rfid FROM inspector_users WHERE inspector_rfid = ?', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Users->inspector_login()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-04-07 14:16:11 --> mysqli_sql_exception: Unknown column 'inspector_id' in 'field list' in C:\wamp64\www\oilid-temp\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\wamp64\www\oilid-temp\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT inspecto...', 0)
+#1 C:\wamp64\www\oilid-temp\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT inspecto...')
+#2 C:\wamp64\www\oilid-temp\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT inspecto...')
+#3 C:\wamp64\www\oilid-temp\app\Controllers\Users.php(25): CodeIgniter\Database\BaseConnection->query('SELECT inspecto...', Array)
+#4 C:\wamp64\www\oilid-temp\system\CodeIgniter.php(933): App\Controllers\Users->inspector_login()
+#5 C:\wamp64\www\oilid-temp\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#6 C:\wamp64\www\oilid-temp\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\wamp64\www\oilid-temp\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#8 C:\wamp64\www\oilid-temp\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#9 C:\wamp64\www\oilid-temp\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#10 {main}
+CRITICAL - 2025-04-07 14:16:11 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'inspector_id' in 'field list'
+[Method: POST, Route: users/inspector_login]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 APPPATH\Controllers\Users.php(25): CodeIgniter\Database\BaseConnection->query('SELECT inspector_id, inspector_name, inspector_rfid FROM inspector_users WHERE inspector_rfid = ?', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Users->inspector_login()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-04-07 14:16:11 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'inspector_id' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT inspector_id, inspector_name, inspector_rfid FROM inspector_users WHERE inspector_rfid = \'d3:ff:a8:19\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT inspector_id, inspector_name, inspector_rfid FROM inspector_users WHERE inspector_rfid = \'d3:ff:a8:19\'')
+ 3 APPPATH\Controllers\Users.php(25): CodeIgniter\Database\BaseConnection->query('SELECT inspector_id, inspector_name, inspector_rfid FROM inspector_users WHERE inspector_rfid = ?', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Users->inspector_login()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-04-07 14:16:11 --> [Caused by] mysqli_sql_exception: Unknown column 'inspector_id' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT inspector_id, inspector_name, inspector_rfid FROM inspector_users WHERE inspector_rfid = \'d3:ff:a8:19\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT inspector_id, inspector_name, inspector_rfid FROM inspector_users WHERE inspector_rfid = \'d3:ff:a8:19\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT inspector_id, inspector_name, inspector_rfid FROM inspector_users WHERE inspector_rfid = \'d3:ff:a8:19\'')
+ 4 APPPATH\Controllers\Users.php(25): CodeIgniter\Database\BaseConnection->query('SELECT inspector_id, inspector_name, inspector_rfid FROM inspector_users WHERE inspector_rfid = ?', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Users->inspector_login()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-04-07 14:16:59 --> ErrorException: Undefined property: stdClass::$inspector_id
+[Method: POST, Route: users/inspector_login]
+in APPPATH\Controllers\Users.php on line 31.
+ 1 APPPATH\Controllers\Users.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$inspector_id', 'C:\\wamp64\\www\\oilid-temp\\app\\Controllers\\Users.php', 31)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Users->inspector_login()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
