@@ -1,0 +1,35 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: oilid_app
+    ports:
+      - "8081:80"
+    volumes:
+      - ./:/var/www/html:cached
+      - ./writable:/var/www/html/writable
+      - ./.env:/var/www/html/.env
+    depends_on:
+      - db
+    restart: unless-stopped
+
+  db:
+    image: postgres:15-alpine
+    container_name: oilid_db
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_DB=postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=2468g0a7A7B7*
+      - POSTGRES_INITDB_ARGS="--encoding=UTF8"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    restart: unless-stopped
+
+volumes:
+  postgres_data:
+    name: oilid_postgres_data 

@@ -14442,3 +14442,14 @@ in SYSTEMPATH\Database\BaseConnection.php on line 467.
  6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
  7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-06-02 17:53:35 --> Error updating RFID: Failed to parse JSON string. Error: Malformed UTF-8 characters, possibly incorrectly encoded
+ERROR - 2025-06-02 17:53:45 --> Error updating RFID: Failed to parse JSON string. Error: Malformed UTF-8 characters, possibly incorrectly encoded
+ERROR - 2025-06-02 17:54:25 --> Error updating RFID: Failed to parse JSON string. Error: Malformed UTF-8 characters, possibly incorrectly encoded
+ERROR - 2025-06-02 17:54:55 --> Error updating RFID: Failed to parse JSON string. Error: Malformed UTF-8 characters, possibly incorrectly encoded
+ERROR - 2025-06-02 17:55:16 --> Error updating RFID: Failed to parse JSON string. Error: Malformed UTF-8 characters, possibly incorrectly encoded
+ERROR - 2025-06-02 17:56:17 --> Error updating RFID: Failed to parse JSON string. Error: Malformed UTF-8 characters, possibly incorrectly encoded
+ERROR - 2025-06-02 17:56:26 --> Error updating RFID: Failed to parse JSON string. Error: Control character error, possibly incorrectly encoded
+ERROR - 2025-06-02 17:58:35 --> Error updating RFID: Failed to parse JSON string. Error: Malformed UTF-8 characters, possibly incorrectly encoded
+ERROR - 2025-06-02 18:01:15 --> Error updating RFID: Failed to parse JSON string. Error: Control character error, possibly incorrectly encoded
+ERROR - 2025-06-02 18:01:55 --> Error updating RFID: Failed to parse JSON string. Error: Malformed UTF-8 characters, possibly incorrectly encoded
+ERROR - 2025-06-02 18:04:30 --> Error updating RFID: Failed to parse JSON string. Error: Malformed UTF-8 characters, possibly incorrectly encoded
