@@ -18,7 +18,7 @@
                                     <div class="section text-center">
                                         <h4 class="mb-4 pb-3">What do you want to do?</h4>
                                         <div class="form-group mt-2">
-                                            <a href="<?= base_url('/inspect') ?>" class="btn mt-4 w-100">
+                                            <a href="inspect" class="btn mt-4 w-100">
                                                 <span class="d-flex align-items-center justify-content-center">
                                                     <i class="uil uil-search me-2" style="font-size: 24px;"></i>
                                                     Inspect
@@ -26,7 +26,7 @@
                                             </a>
                                         </div>
                                         <div class="form-group mt-4">
-                                            <a href="<?= base_url('/query') ?>" class="btn mt-4 w-100">
+                                            <a href="query" class="btn mt-4 w-100">
                                                 <span class="d-flex align-items-center justify-content-center">
                                                     <i class="uil uil-database me-2" style="font-size: 24px;"></i>
                                                     Query
@@ -48,7 +48,7 @@
     // Function to check internet connectivity
     async function checkConnectivity() {
         try {
-            const response = await fetch('<?= base_url('ping') ?>', {
+            const response = await fetch('ping', {
                 method: 'GET',
                 headers: {
                     'X-Requested-With': 'XMLHttpRequest'
@@ -77,7 +77,7 @@
                 return;
             }
 
-            const response = await fetch('<?= base_url('inspector/sync_pending_data') ?>', {
+            const response = await fetch('inspector/sync_pending_data', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

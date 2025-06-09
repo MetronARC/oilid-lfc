@@ -2,15 +2,15 @@
 <?= $this->section('page-content') ?>
 
 <!-- Add Bootstrap JS and Popper.js CDN -->
-<script src="<?= base_url('js/popper.min.js') ?>"></script>
-<script src="<?= base_url('js/bootstrap.min.js') ?>"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
 
 <div class="section">
     <div class="container">
         <div class="row justify-content-center mb-4">
             <div class="col-12 text-center">
                 <a href="/" class="logo mb-4 d-inline-block">
-                    <img src="<?= base_url('img/oilid.png') ?>" alt="" style="width: 75px; height: 50px;" />
+                    <img src="img/oilid.png" alt="" style="width: 75px; height: 50px;" />
                 </a>
             </div>
         </div>
@@ -23,9 +23,9 @@
                                 <div class="center-wrap">
                                     <div class="section text-center">
                                         <div class="nav-links mb-4">
-                                            <a href="<?= base_url('inspect') ?>" class="nav-link active">Inspect</a>
-                                            <a href="<?= base_url('query') ?>" class="nav-link">Query</a>
-                                            <a href="<?= base_url('inspector/logout') ?>" class="nav-link">Logout</a>
+                                            <a href="inspect" class="nav-link active">Inspect</a>
+                                            <a href="query" class="nav-link">Query</a>
+                                            <a href="inspector/logout" class="nav-link">Logout</a>
                                         </div>
                                         <h4 class="mb-4 pb-3">Inspect Item</h4>
                                         <div id="nfc-container" class="form-group">
@@ -421,7 +421,7 @@
     async function processRFID(serialNumber) {
         try {
             showLoading();
-            const response = await fetch('<?= base_url('read/item_inspect') ?>', {
+            const response = await fetch('read/item_inspect', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/x-www-form-urlencoded',
@@ -465,7 +465,7 @@
     // Function to check for RFID value
     async function checkRFIDValue() {
         try {
-            const response = await fetch('<?= base_url('inspector/check_rfid') ?>', {
+            const response = await fetch('inspector/check_rfid', {
                 method: 'GET',
                 headers: {
                     'X-Requested-With': 'XMLHttpRequest'
@@ -491,7 +491,6 @@
         
         isPolling = true;
         showLoading();
-        log("Waiting for RFID card...");
         
         // Check every 1 second
         pollingInterval = setInterval(checkRFIDValue, 1000);
@@ -508,7 +507,7 @@
     // Function to check internet connectivity
     async function checkConnectivity() {
         try {
-            const response = await fetch('<?= base_url('ping') ?>', {
+            const response = await fetch('ping', {
                 method: 'GET',
                 headers: {
                     'X-Requested-With': 'XMLHttpRequest'
@@ -537,7 +536,7 @@
                 return;
             }
 
-            const response = await fetch('<?= base_url('inspector/sync_pending_data') ?>', {
+            const response = await fetch('inspector/sync_pending_data', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -586,7 +585,7 @@
             
             const formData = new FormData(this);
             try {
-                const response = await fetch('<?= base_url('read/save_inspection') ?>', {
+                const response = await fetch('read/save_inspection', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/x-www-form-urlencoded',
@@ -614,7 +613,7 @@
                 } else {
                     if (data.error_type === 'auth_error') {
                         // Redirect to login page if session expired
-                        window.location.href = '<?= base_url('login') ?>';
+                        window.location.href = 'login';
                     } else {
                         showErrorAlert(data.message, data.error_type);
                     }

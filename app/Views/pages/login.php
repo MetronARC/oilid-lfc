@@ -3,7 +3,7 @@
 
 
 <a href="/" class="logo" target="_blank">
-    <img src="<?= base_url('img/oilid.png') ?>" alt="" style="width: 75px; height: 50px;" />
+    <img src="img/oilid.png" alt="" style="width: 75px; height: 50px;" />
 </a>
 
 <div class="section">
@@ -166,7 +166,7 @@
             showLoading();
             log(`Initiating login process for UID: ${uid}`);
 
-            const response = await fetch('<?= base_url('inspector/nfc_login') ?>', {
+            const response = await fetch('inspector/nfc_login', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/x-www-form-urlencoded',
@@ -182,7 +182,7 @@
                 showSuccessAlert(data.message);
                 // Redirect after showing the success message
                 setTimeout(() => {
-                    window.location.href = '<?= base_url('dashboard') ?>';
+                    window.location.href = 'dashboard';
                 }, 1500);
             } else {
                 if (data.redirect) {
@@ -206,7 +206,7 @@
     // Function to check for RFID value with improved error handling
     async function checkRFIDValue() {
         try {
-            const response = await fetch('<?= base_url('inspector/check_rfid') ?>', {
+            const response = await fetch('inspector/check_rfid', {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json',
@@ -255,7 +255,7 @@
     // Function to check internet connectivity
     async function checkConnectivity() {
         try {
-            const response = await fetch('<?= base_url('ping') ?>', {
+            const response = await fetch('ping', {
                 method: 'GET',
                 headers: {
                     'X-Requested-With': 'XMLHttpRequest'
@@ -284,7 +284,7 @@
                 return;
             }
 
-            const response = await fetch('<?= base_url('inspector/sync_pending_data') ?>', {
+            const response = await fetch('inspector/sync_pending_data', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -321,7 +321,7 @@
             // For a regular HTTP request, use a form submission
             const form = document.createElement('form');
             form.method = 'POST';
-            form.action = '<?= base_url('logout') ?>';
+            form.action = 'logout';
             document.body.appendChild(form);
             form.submit();
         } catch (error) {
