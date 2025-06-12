@@ -3,7 +3,7 @@
 <?= $this->section('page-content') ?>
 
 <a href="/" class="logo" target="_blank">
-    <img src="<?= base_url('img/oilid.png') ?>" alt="" style="width: 75px; height: 50px;" />
+    <img src="img/oilid.png" alt="" style="width: 75px; height: 50px;" />
 </a>
 
 <div class="section">

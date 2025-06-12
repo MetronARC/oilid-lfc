@@ -1,0 +1,104 @@
+ERROR - 2025-06-09 09:19:25 --> Error connecting to the database: ErrorException: pg_connect(): Unable to connect to PostgreSQL server: could not translate host name &quot;aws-0-ap-southeast-1.pooler.supabase.com&quot; to address: Unknown host in C:\wamp64\www\oilid-lfc\system\Database\Postgre\Connection.php:77
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_connect(): U...', 'C:\\wamp64\\www\\o...', 77)
+#1 C:\wamp64\www\oilid-lfc\system\Database\Postgre\Connection.php(77): pg_connect('host=aws-0-ap-s...')
+#2 C:\wamp64\www\oilid-lfc\system\Database\BaseConnection.php(421): CodeIgniter\Database\Postgre\Connection->connect(false)
+#3 C:\wamp64\www\oilid-lfc\app\Services\SupabaseService.php(16): CodeIgniter\Database\BaseConnection->initialize()
+#4 C:\wamp64\www\oilid-lfc\app\Controllers\Inspector.php(445): App\Services\SupabaseService->__construct()
+#5 C:\wamp64\www\oilid-lfc\system\CodeIgniter.php(933): App\Controllers\Inspector->sync_pending_data()
+#6 C:\wamp64\www\oilid-lfc\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inspector))
+#7 C:\wamp64\www\oilid-lfc\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\oilid-lfc\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#9 C:\wamp64\www\oilid-lfc\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\wamp64\www\oilid-lfc\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+CRITICAL - 2025-06-09 09:19:25 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [Postgre]: pg_connect(): Unable to connect to PostgreSQL server: could not translate host name &quot;aws-0-ap-southeast-1.pooler.supabase.com&quot; to address: Unknown host
+[Method: POST, Route: inspector/sync_pending_data]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 APPPATH\Services\SupabaseService.php(16): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH\Controllers\Inspector.php(445): App\Services\SupabaseService->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Inspector->sync_pending_data()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inspector))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-06-09 09:19:32 --> Error connecting to the database: ErrorException: pg_connect(): Unable to connect to PostgreSQL server: could not translate host name &quot;aws-0-ap-southeast-1.pooler.supabase.com&quot; to address: Unknown host in C:\wamp64\www\oilid-lfc\system\Database\Postgre\Connection.php:77
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_connect(): U...', 'C:\\wamp64\\www\\o...', 77)
+#1 C:\wamp64\www\oilid-lfc\system\Database\Postgre\Connection.php(77): pg_connect('host=aws-0-ap-s...')
+#2 C:\wamp64\www\oilid-lfc\system\Database\BaseConnection.php(421): CodeIgniter\Database\Postgre\Connection->connect(false)
+#3 C:\wamp64\www\oilid-lfc\app\Services\SupabaseService.php(16): CodeIgniter\Database\BaseConnection->initialize()
+#4 C:\wamp64\www\oilid-lfc\app\Controllers\Inspector.php(445): App\Services\SupabaseService->__construct()
+#5 C:\wamp64\www\oilid-lfc\system\CodeIgniter.php(933): App\Controllers\Inspector->sync_pending_data()
+#6 C:\wamp64\www\oilid-lfc\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inspector))
+#7 C:\wamp64\www\oilid-lfc\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\oilid-lfc\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#9 C:\wamp64\www\oilid-lfc\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\wamp64\www\oilid-lfc\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+CRITICAL - 2025-06-09 09:19:32 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [Postgre]: pg_connect(): Unable to connect to PostgreSQL server: could not translate host name &quot;aws-0-ap-southeast-1.pooler.supabase.com&quot; to address: Unknown host
+[Method: POST, Route: inspector/sync_pending_data]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 APPPATH\Services\SupabaseService.php(16): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH\Controllers\Inspector.php(445): App\Services\SupabaseService->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Inspector->sync_pending_data()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inspector))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-06-09 09:23:02 --> Error connecting to the database: ErrorException: pg_connect(): Unable to connect to PostgreSQL server: could not translate host name &quot;aws-0-ap-southeast-1.pooler.supabase.com&quot; to address: Unknown host in C:\wamp64\www\oilid-lfc\system\Database\Postgre\Connection.php:77
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_connect(): U...', 'C:\\wamp64\\www\\o...', 77)
+#1 C:\wamp64\www\oilid-lfc\system\Database\Postgre\Connection.php(77): pg_connect('host=aws-0-ap-s...')
+#2 C:\wamp64\www\oilid-lfc\system\Database\BaseConnection.php(421): CodeIgniter\Database\Postgre\Connection->connect(false)
+#3 C:\wamp64\www\oilid-lfc\app\Services\SupabaseService.php(16): CodeIgniter\Database\BaseConnection->initialize()
+#4 C:\wamp64\www\oilid-lfc\app\Controllers\Inspector.php(445): App\Services\SupabaseService->__construct()
+#5 C:\wamp64\www\oilid-lfc\system\CodeIgniter.php(933): App\Controllers\Inspector->sync_pending_data()
+#6 C:\wamp64\www\oilid-lfc\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inspector))
+#7 C:\wamp64\www\oilid-lfc\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\oilid-lfc\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#9 C:\wamp64\www\oilid-lfc\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\wamp64\www\oilid-lfc\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+CRITICAL - 2025-06-09 09:23:02 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [Postgre]: pg_connect(): Unable to connect to PostgreSQL server: could not translate host name &quot;aws-0-ap-southeast-1.pooler.supabase.com&quot; to address: Unknown host
+[Method: POST, Route: inspector/sync_pending_data]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 APPPATH\Services\SupabaseService.php(16): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH\Controllers\Inspector.php(445): App\Services\SupabaseService->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Inspector->sync_pending_data()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inspector))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-06-09 09:23:30 --> Error connecting to the database: ErrorException: pg_connect(): Unable to connect to PostgreSQL server: could not translate host name &quot;aws-0-ap-southeast-1.pooler.supabase.com&quot; to address: Unknown host in C:\wamp64\www\oilid-lfc\system\Database\Postgre\Connection.php:77
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_connect(): U...', 'C:\\wamp64\\www\\o...', 77)
+#1 C:\wamp64\www\oilid-lfc\system\Database\Postgre\Connection.php(77): pg_connect('host=aws-0-ap-s...')
+#2 C:\wamp64\www\oilid-lfc\system\Database\BaseConnection.php(421): CodeIgniter\Database\Postgre\Connection->connect(false)
+#3 C:\wamp64\www\oilid-lfc\app\Services\SupabaseService.php(16): CodeIgniter\Database\BaseConnection->initialize()
+#4 C:\wamp64\www\oilid-lfc\app\Controllers\Inspector.php(445): App\Services\SupabaseService->__construct()
+#5 C:\wamp64\www\oilid-lfc\system\CodeIgniter.php(933): App\Controllers\Inspector->sync_pending_data()
+#6 C:\wamp64\www\oilid-lfc\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inspector))
+#7 C:\wamp64\www\oilid-lfc\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\oilid-lfc\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#9 C:\wamp64\www\oilid-lfc\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\wamp64\www\oilid-lfc\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+CRITICAL - 2025-06-09 09:23:30 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [Postgre]: pg_connect(): Unable to connect to PostgreSQL server: could not translate host name &quot;aws-0-ap-southeast-1.pooler.supabase.com&quot; to address: Unknown host
+[Method: POST, Route: inspector/sync_pending_data]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 APPPATH\Services\SupabaseService.php(16): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH\Controllers\Inspector.php(445): App\Services\SupabaseService->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Inspector->sync_pending_data()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inspector))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
