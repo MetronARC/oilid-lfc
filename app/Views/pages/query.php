@@ -342,7 +342,7 @@
     function showSuccessModal(data) {
         hideLoading();
         currentItemUid = data.item_uid;
-        document.getElementById('itemImage').src = `<?= base_url('itemImage/') ?>/${data.item_image}`;
+        document.getElementById('itemImage').src = `itemImage/${data.item_image}`;
         document.getElementById('itemName').textContent = data.item_name;
         document.getElementById('itemType').textContent = data.item_type;
         

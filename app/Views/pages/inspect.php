@@ -320,7 +320,7 @@
 
     function showSuccessModal(data) {
         hideLoading();
-        document.getElementById('itemImage').src = `<?= base_url('itemImage/') ?>/${data.item_image}`;
+        document.getElementById('itemImage').src = `itemImage/${data.item_image}`;
         document.getElementById('itemName').textContent = data.item_name;
         document.getElementById('itemType').textContent = data.item_type;
         document.getElementById('itemUid').value = data.item_uid;
